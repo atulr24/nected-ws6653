@@ -1,0 +1,94 @@
+{
+ "entityType": "dataSet",
+ "category": "dataSet",
+ "data": {
+  "createdAt": "2025-11-17T11:33:57.312Z",
+  "updatedAt": "2025-11-17T11:34:09.06611Z",
+  "isDeleted": false,
+  "publishedAt": "0001-01-01T00:00:00Z",
+  "testedAt": "2025-11-17T11:34:09.063Z",
+  "entityId": "a6b58501-32aa-4f41-be50-4f244d93c738",
+  "name": "mongodb",
+  "commitId": "commit-ba8f1c35-d006-4035-8f38-817342636146",
+  "status": "tested",
+  "lastVersion": "",
+  "isLive": false,
+  "commitInfo": {
+   "title": "Created at 2025-11-17 11:33:57",
+   "timeStamp": "2025-11-17T11:33:57.311067529Z"
+  },
+  "fields": {
+   "movie_id": {
+    "ColumnName": "movie_id",
+    "DataType": "objectid",
+    "Order": 2,
+    "ExecutedValue": "573a1390f29313caabcd4323"
+   },
+   "_id": {
+    "ColumnName": "_id",
+    "DataType": "objectid",
+    "Order": 7,
+    "ExecutedValue": "5a9427648b0beebeb69579e7"
+   },
+   "Bool": {
+    "ColumnName": "Bool",
+    "DataType": "boolean",
+    "Order": 5,
+    "ExecutedValue": false
+   },
+   "date": {
+    "ColumnName": "date",
+    "DataType": "dateTime",
+    "Order": 4,
+    "ExecutedValue": "2002-08-18T04:56:07Z"
+   },
+   "name": {
+    "ColumnName": "name",
+    "DataType": "string",
+    "Order": 8,
+    "ExecutedValue": "email@email.com"
+   },
+   "text": {
+    "ColumnName": "text",
+    "DataType": "json",
+    "Order": 3,
+    "ExecutedValue": {
+     "$cond": {
+      "if": {
+       "$eq": [
+        "$Bool",
+        true
+       ]
+      },
+      "else": "NegativeReview",
+      "then": "PositiveReview"
+     }
+    }
+   },
+   "email": {
+    "ColumnName": "email",
+    "DataType": "string",
+    "Order": 1,
+    "ExecutedValue": "mercedes_tyler@fakegmail.com"
+   },
+   "Integer": {
+    "ColumnName": "Integer",
+    "DataType": "string",
+    "Order": 6,
+    "ExecutedValue": "100"
+   }
+  },
+  "query": "db.comments.find({})",
+  "version": "draft",
+  "connectorId": "a39d6038-298e-429e-b056-961fb240ab67",
+  "isDemo": false,
+  "settings": {
+   "durationUnit": "m",
+   "rowLimit": 1000,
+   "durationValue": 5,
+   "cacheEnabled": true,
+   "timezone": "Asia/Calcutta",
+   "dateFormat": "in"
+  }
+ }
+}
