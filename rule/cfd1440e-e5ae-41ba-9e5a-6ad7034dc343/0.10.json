@@ -1,22 +1,23 @@
 {
  "entityType": "rule",
  "category": "decisionTable",
+ "live": true,
  "data": {
   "createdAt": "2025-11-17T11:32:47.954Z",
-  "updatedAt": "2025-11-17T11:49:45.818353Z",
+  "updatedAt": "2025-11-17T11:49:13.745Z",
   "isDeleted": false,
-  "testedAt": "2025-11-17T11:49:41.863Z",
-  "publishedAt": "2025-11-17T11:49:45.798Z",
+  "testedAt": "2025-11-17T11:49:09.164Z",
+  "publishedAt": "2025-11-17T11:49:13.734Z",
   "entityId": "cfd1440e-e5ae-41ba-9e5a-6ad7034dc343",
   "name": "T1M",
-  "commitId": "commit-292993fe-9467-4aca-985c-7685b0572175",
+  "commitId": "commit-af08e5a7-67a1-4212-ba92-1e0f8d1b4970",
   "status": "published",
   "lastVersion": "draft",
-  "isLive": true,
+  "isLive": false,
   "commitInfo": {
-   "title": "Forked from 0.10",
+   "title": "Created at 2025-11-17 11:32:47",
    "description": "v1",
-   "timeStamp": "2025-11-17T11:49:45.795Z"
+   "timeStamp": "2025-11-17T11:49:13.732Z"
   },
   "customInput": {
    "name": {
@@ -56,6 +57,20 @@
   },
   "conditions": {
    "nodes": {
+    "rule_02": {
+     "value": "",
+     "operator": "eq",
+     "dataType": "string",
+     "nodeType": "condition",
+     "parent": "rule_01",
+     "leftNode": [
+      "rule_03"
+     ],
+     "rightNode": [
+      "rhs_inbLvW"
+     ],
+     "siblingIndex": 1
+    },
     "rule_03": {
      "sourceType": "customInput",
      "dataType": "string",
@@ -97,27 +112,13 @@
       "rule_02"
      ],
      "siblingIndex": 1
-    },
-    "rule_02": {
-     "value": "",
-     "operator": "eq",
-     "dataType": "string",
-     "nodeType": "condition",
-     "parent": "rule_01",
-     "leftNode": [
-      "rule_03"
-     ],
-     "rightNode": [
-      "rhs_inbLvW"
-     ],
-     "siblingIndex": 1
     }
    }
   },
   "firstCustomInput": "name",
   "description": "",
   "policy": "first",
-  "version": "0.20",
+  "version": "0.10",
   "type": "decisionTable",
   "dataSetId": "a6b58501-32aa-4f41-be50-4f244d93c738",
   "settings": {
@@ -127,23 +128,12 @@
     "isEnabled": true,
     "isPrivate": true
    },
-   "schedule": [
-    {
-     "startAt": "2025-11-17T17:20:00+05:30",
-     "endAt": "2025-11-17T17:21:00+05:30",
-     "spec": {
-      "minute": "1"
-     },
-     "unit": "minute",
-     "isEnabled": true
-    }
-   ],
    "isEnabled": true,
    "cachingInfo": {
     "Enabled": false,
     "Duration": {
      "Value": 0,
-     "Unit": "d"
+     "Unit": ""
     },
     "CacheKeys": ""
    },
@@ -155,5 +145,20 @@
    "Dataset is attached in rule input but not used inside any condition or used only with Any operator."
   ],
   "schemaVersion": "0.1.1"
- }
+ },
+ "dependencies": [
+  {
+   "entityCommitId": "commit-af08e5a7-67a1-4212-ba92-1e0f8d1b4970",
+   "entityType": "rule",
+   "entityId": "cfd1440e-e5ae-41ba-9e5a-6ad7034dc343",
+   "entityVersion": "0.10",
+   "entityNodeId": "dataSet",
+   "dependencyType": "dataSet",
+   "dependencyId": "a6b58501-32aa-4f41-be50-4f244d93c738",
+   "dependencyVersion": "live",
+   "isDeleted": false,
+   "createdAt": "2025-11-17T11:48:35.057169Z",
+   "updatedAt": "2025-11-17T11:49:13.739599Z"
+  }
+ ]
 }

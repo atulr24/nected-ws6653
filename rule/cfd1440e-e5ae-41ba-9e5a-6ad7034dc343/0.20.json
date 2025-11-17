@@ -1,15 +1,16 @@
 {
  "entityType": "rule",
  "category": "decisionTable",
+ "live": true,
  "data": {
   "createdAt": "2025-11-17T11:32:47.954Z",
-  "updatedAt": "2025-11-17T11:49:45.818353Z",
+  "updatedAt": "2025-11-17T11:49:45.808Z",
   "isDeleted": false,
   "testedAt": "2025-11-17T11:49:41.863Z",
   "publishedAt": "2025-11-17T11:49:45.798Z",
   "entityId": "cfd1440e-e5ae-41ba-9e5a-6ad7034dc343",
   "name": "T1M",
-  "commitId": "commit-292993fe-9467-4aca-985c-7685b0572175",
+  "commitId": "commit-c8f92b6f-6ddc-410e-8983-6ff3ad4a1178",
   "status": "published",
   "lastVersion": "draft",
   "isLive": true,
@@ -56,6 +57,28 @@
   },
   "conditions": {
    "nodes": {
+    "rule_01": {
+     "operator": "and",
+     "nodeType": "group",
+     "children": [
+      "rule_02"
+     ],
+     "siblingIndex": 1
+    },
+    "rule_02": {
+     "value": "",
+     "operator": "eq",
+     "dataType": "string",
+     "nodeType": "condition",
+     "parent": "rule_01",
+     "leftNode": [
+      "rule_03"
+     ],
+     "rightNode": [
+      "rhs_inbLvW"
+     ],
+     "siblingIndex": 1
+    },
     "rule_03": {
      "sourceType": "customInput",
      "dataType": "string",
@@ -88,28 +111,6 @@
      "nodeType": "params",
      "attribute": "MatchedResumeValue",
      "parent": "rule_02",
-     "siblingIndex": 1
-    },
-    "rule_01": {
-     "operator": "and",
-     "nodeType": "group",
-     "children": [
-      "rule_02"
-     ],
-     "siblingIndex": 1
-    },
-    "rule_02": {
-     "value": "",
-     "operator": "eq",
-     "dataType": "string",
-     "nodeType": "condition",
-     "parent": "rule_01",
-     "leftNode": [
-      "rule_03"
-     ],
-     "rightNode": [
-      "rhs_inbLvW"
-     ],
      "siblingIndex": 1
     }
    }
@@ -155,5 +156,20 @@
    "Dataset is attached in rule input but not used inside any condition or used only with Any operator."
   ],
   "schemaVersion": "0.1.1"
- }
+ },
+ "dependencies": [
+  {
+   "entityCommitId": "commit-c8f92b6f-6ddc-410e-8983-6ff3ad4a1178",
+   "entityType": "rule",
+   "entityId": "cfd1440e-e5ae-41ba-9e5a-6ad7034dc343",
+   "entityVersion": "0.20",
+   "entityNodeId": "dataSet",
+   "dependencyType": "dataSet",
+   "dependencyId": "a6b58501-32aa-4f41-be50-4f244d93c738",
+   "dependencyVersion": "live",
+   "isDeleted": false,
+   "createdAt": "2025-11-17T11:49:21.79125Z",
+   "updatedAt": "2025-11-17T11:49:45.804028Z"
+  }
+ ]
 }
