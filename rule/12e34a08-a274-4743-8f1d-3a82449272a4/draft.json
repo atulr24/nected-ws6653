@@ -1,0 +1,202 @@
+{
+ "entityType": "rule",
+ "category": "decisionTable",
+ "data": {
+  "createdAt": "2025-11-17T11:39:39.729Z",
+  "updatedAt": "2025-11-17T11:39:39.729Z",
+  "isDeleted": false,
+  "testedAt": "0001-01-01T00:00:00Z",
+  "publishedAt": "0001-01-01T00:00:00Z",
+  "entityId": "12e34a08-a274-4743-8f1d-3a82449272a4",
+  "name": "T1M_copy",
+  "commitId": "commit-7f032ddf-b39b-4af1-9106-cdc5424f390c",
+  "status": "draft",
+  "lastVersion": "",
+  "isLive": false,
+  "commitInfo": {
+   "title": "Created at 2025-11-17 11:39:39",
+   "timeStamp": "2025-11-17T11:39:39.72940677Z"
+  },
+  "customInput": {
+   "name": {
+    "name": "name",
+    "dataType": "string",
+    "attribute": "name",
+    "sourceType": "dataSet",
+    "executedValue": "email@email.com"
+   }
+  },
+  "decisionTable": {
+   "rows": {
+    "rule_01": {
+     "nextId": "g_aXAsZt",
+     "isEnabled": true
+    },
+    "g_aXAsZt": {
+     "prevId": "rule_01",
+     "isEnabled": true
+    }
+   },
+   "properties": {
+    "rule_03": {
+     "type": "simpleCondition"
+    }
+   },
+   "firstRow": "rule_01",
+   "firstProperty": "rule_03"
+  },
+  "action": {
+   "then": {
+    "actionNode": {
+     "actionData_action_1": {
+      "name": "action_1",
+      "connectorId": "c7ad4635-327e-404e-a79e-09cc5faadd09",
+      "entity": "",
+      "entityId": "",
+      "config": {
+       "method": "GET",
+       "headers": [
+        {
+         "value": "as",
+         "key": "x-api-key"
+        }
+       ],
+       "settings": {
+        "cache": {
+         "enabled": false,
+         "duration": {
+          "unit": "d",
+          "value": 0
+         },
+         "cacheKeys": ""
+        }
+       },
+       "queryParams": [],
+       "path": "/posts/4",
+       "query": ""
+      }
+     }
+    },
+    "firstActionNode": "actionData_action_1"
+   },
+   "else": {
+    
+   }
+  },
+  "conditions": {
+   "nodes": {
+    "rule_01": {
+     "operator": "and",
+     "nodeType": "group",
+     "children": [
+      "rule_02"
+     ],
+     "siblingIndex": 1
+    },
+    "rule_02": {
+     "value": "",
+     "operator": "eq",
+     "dataType": "string",
+     "nodeType": "condition",
+     "parent": "rule_01",
+     "leftNode": [
+      "rule_03"
+     ],
+     "rightNode": [
+      "rhs_inbLvW"
+     ],
+     "siblingIndex": 1
+    },
+    "rule_03": {
+     "sourceType": "customInput",
+     "dataType": "string",
+     "nodeType": "params",
+     "attribute": "name",
+     "siblingIndex": 1
+    },
+    "c_6zldrI": {
+     "name": "Any",
+     "operator": "any",
+     "dataType": "string",
+     "nodeType": "condition",
+     "parent": "g_aXAsZt",
+     "leftNode": [
+      "rule_03"
+     ],
+     "siblingIndex": 1
+    },
+    "g_aXAsZt": {
+     "operator": "and",
+     "nodeType": "group",
+     "children": [
+      "c_6zldrI"
+     ],
+     "siblingIndex": 1
+    },
+    "rhs_inbLvW": {
+     "sourceType": "systemVar",
+     "dataType": "string",
+     "nodeType": "params",
+     "attribute": "MatchedResumeValue",
+     "parent": "rule_02",
+     "siblingIndex": 1
+    }
+   }
+  },
+  "firstCustomInput": "name",
+  "description": "",
+  "policy": "first",
+  "version": "draft",
+  "type": "decisionTable",
+  "dataSetId": "a6b58501-32aa-4f41-be50-4f244d93c738",
+  "settings": {
+   "startAt": "0001-01-01T00:00:00Z",
+   "endAt": "0001-01-01T00:00:00Z",
+   "api": {
+    "isEnabled": true,
+    "isPrivate": true
+   },
+   "isEnabled": true,
+   "cachingInfo": {
+    "Enabled": false,
+    "Duration": {
+     "Value": 0,
+     "Unit": ""
+    },
+    "CacheKeys": ""
+   },
+   "timezone": "Asia/Calcutta",
+   "dateFormat": "in"
+  },
+  "isDemo": false,
+  "schemaVersion": "0.1.1"
+ },
+ "dependencies": [
+  {
+   "entityCommitId": "commit-7f032ddf-b39b-4af1-9106-cdc5424f390c",
+   "entityType": "rule",
+   "entityId": "12e34a08-a274-4743-8f1d-3a82449272a4",
+   "entityVersion": "draft",
+   "entityNodeId": "then-actionData_action_1",
+   "dependencyType": "connector",
+   "dependencyId": "c7ad4635-327e-404e-a79e-09cc5faadd09",
+   "dependencyVersion": "live",
+   "isDeleted": false,
+   "createdAt": "2025-11-17T11:39:39.742262Z",
+   "updatedAt": "2025-11-17T11:39:39.742262Z"
+  },
+  {
+   "entityCommitId": "commit-7f032ddf-b39b-4af1-9106-cdc5424f390c",
+   "entityType": "rule",
+   "entityId": "12e34a08-a274-4743-8f1d-3a82449272a4",
+   "entityVersion": "draft",
+   "entityNodeId": "dataSet",
+   "dependencyType": "dataSet",
+   "dependencyId": "a6b58501-32aa-4f41-be50-4f244d93c738",
+   "dependencyVersion": "draft",
+   "isDeleted": false,
+   "createdAt": "2025-11-17T11:39:39.739982Z",
+   "updatedAt": "2025-11-17T11:39:39.739982Z"
+  }
+ ]
+}
